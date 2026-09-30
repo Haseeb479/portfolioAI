@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       'AI/ML Engineer specializing in production-grade machine learning systems, large language models, and intelligent automation.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/img/project-whatsapp.jpg',
         width: 1200,
         height: 630,
         alt: 'Haseeb Tariq — AI/ML Engineer',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'Haseeb Tariq — AI/ML Engineer',
     description:
       'AI/ML Engineer specializing in production-grade machine learning systems, large language models, and intelligent automation.',
-    images: ['/og-image.png'],
+    images: ['/img/project-whatsapp.jpg'],
   },
   robots: {
     index: true,
