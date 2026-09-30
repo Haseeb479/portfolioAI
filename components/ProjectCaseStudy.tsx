@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import { gsap } from 'gsap'
 import Image from 'next/image'
 import { Project } from '@/data/projects'
@@ -36,7 +36,7 @@ export default function ProjectCaseStudy({ project, onClose }: Props) {
     return () => { document.body.style.overflow = '' }
   }, [])
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     document.body.style.overflow = ''
 
@@ -47,14 +47,14 @@ export default function ProjectCaseStudy({ project, onClose }: Props) {
       duration: 0.5, ease: 'power3.in',
       onComplete: onClose,
     })
-  }
+  }, [onClose])
 
   // ESC key
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') handleClose() }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [])
+  }, [handleClose])
 
   return (
     <div

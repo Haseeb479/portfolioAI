@@ -188,7 +188,7 @@ export default function Navigation() {
         aria-hidden={!menuOpen}
       >
         <nav className="flex flex-col gap-4" aria-label="Menu navigation">
-          {NAV_LINKS.map((link, i) => (
+          {NAV_LINKS.map(link => (
             <a
               key={link.label}
               href={link.href}

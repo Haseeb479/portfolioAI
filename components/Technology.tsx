@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { technologies, technologyCategories } from '@/data/technologies'
 
 export default function Technology() {
@@ -30,7 +30,7 @@ export default function Technology() {
 
         {/* Category rows */}
         <div className="space-y-0">
-          {grouped.map((group, gi) => (
+          {grouped.map(group => (
             <div
               key={group.category}
               className="border-t"

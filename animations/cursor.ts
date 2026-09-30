@@ -7,8 +7,7 @@ interface CursorState {
   scale: number
 }
 
-let state: CursorState = { x: 0, y: 0, vx: 0, vy: 0, label: '', scale: 1 }
-let dotX = 0, dotY = 0
+const state: CursorState = { x: 0, y: 0, vx: 0, vy: 0, label: '', scale: 1 }
 let ringX = 0, ringY = 0
 let rafId: number
 let dot: HTMLElement | null = null
